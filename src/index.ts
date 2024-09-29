@@ -11,7 +11,7 @@ if (require('electron-squirrel-startup') === true) app.quit()
 // Ensure that app is has latest update available
 const { updateElectronApp } = require('update-electron-app')
 updateElectronApp({
-  updateInterval: '1 minute',
+  updateInterval: '5 minutes',
 })
 
 const createWindow = (): void => {
