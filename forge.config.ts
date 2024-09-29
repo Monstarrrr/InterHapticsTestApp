@@ -16,13 +16,43 @@ import 'dotenv/config'
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    icon: 'assets/icon',
   },
   rebuildConfig: {},
   makers: [
-    new MakerSquirrel({}),
-    new MakerZIP({}, ['darwin']),
-    new MakerRpm({}),
-    new MakerDeb({}),
+    // new MakerSquirrel({}),
+    // new MakerZIP({}, ['darwin']),
+    // new MakerRpm({}),
+    // new MakerDeb({}),
+
+    // Windows
+    {
+      name: '@electron-forge/maker-squirrel',
+      config: {
+        bin: 'Electron Starter',
+      },
+    },
+    // MacOS
+    {
+      name: '@electron-forge/maker-dmg',
+      config: {
+        bin: 'Electron Starter',
+      },
+    },
+    // Debian
+    {
+      name: '@electron-forge/maker-deb',
+      config: {
+        bin: 'Electron Starter',
+      },
+    },
+    // RPM
+    {
+      name: '@electron-forge/maker-rpm',
+      config: {
+        bin: 'Electron Starter',
+      },
+    },
   ],
   publishers: [
     {
@@ -38,6 +68,10 @@ const config: ForgeConfig = {
     },
   ],
   plugins: [
+    {
+      name: '@electron-forge/plugin-auto-unpack-natives',
+      config: {},
+    },
     new AutoUnpackNativesPlugin({}),
     new WebpackPlugin({
       mainConfig,
