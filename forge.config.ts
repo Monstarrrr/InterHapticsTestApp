@@ -44,6 +44,9 @@ const config: ForgeConfig = {
       name: '@electron-forge/maker-deb',
       config: {
         bin: 'Electron Starter',
+        options: {
+          icon: 'assets/icon',
+        },
       },
     },
     // RPM
@@ -51,6 +54,9 @@ const config: ForgeConfig = {
       name: '@electron-forge/maker-rpm',
       config: {
         bin: 'Electron Starter',
+        options: {
+          icon: 'assets/icon',
+        },
       },
     },
   ],
