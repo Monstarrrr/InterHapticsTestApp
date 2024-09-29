@@ -20,45 +20,10 @@ const config: ForgeConfig = {
   },
   rebuildConfig: {},
   makers: [
-    // new MakerSquirrel({}),
-    // new MakerZIP({}, ['darwin']),
-    // new MakerRpm({}),
-    // new MakerDeb({}),
-
-    // Windows
-    {
-      name: '@electron-forge/maker-squirrel',
-      config: {
-        bin: 'Electron Starter',
-      },
-    },
-    // MacOS
-    {
-      name: '@electron-forge/maker-dmg',
-      config: {
-        bin: 'Electron Starter',
-      },
-    },
-    // Debian
-    {
-      name: '@electron-forge/maker-deb',
-      config: {
-        bin: 'Electron Starter',
-        options: {
-          icon: 'assets/icon',
-        },
-      },
-    },
-    // RPM
-    {
-      name: '@electron-forge/maker-rpm',
-      config: {
-        bin: 'Electron Starter',
-        options: {
-          icon: 'assets/icon',
-        },
-      },
-    },
+    new MakerSquirrel({}),
+    new MakerZIP({}, ['darwin']),
+    new MakerRpm({}),
+    new MakerDeb({}),
   ],
   publishers: [
     {
