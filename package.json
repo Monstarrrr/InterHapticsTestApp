@@ -1,7 +1,7 @@
 {
   "name": "interhapticstestapp",
   "productName": "interhapticstestapp",
-  "version": "1.1.2",
+  "version": "1.2.3",
   "description": "My Electron application description",
   "main": ".webpack/main",
   "repository": {

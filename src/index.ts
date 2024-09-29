@@ -10,7 +10,9 @@ if (require('electron-squirrel-startup') === true) app.quit()
 
 // Ensure that app is has latest update available
 const { updateElectronApp } = require('update-electron-app')
-updateElectronApp()
+updateElectronApp({
+  updateInterval: '1 minute',
+})
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
