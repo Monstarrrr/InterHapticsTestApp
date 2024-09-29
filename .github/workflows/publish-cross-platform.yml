@@ -1,9 +1,6 @@
 # .github/workflows/release.yml
 name: Release app
-on: 
-  push:
-    branches: 
-      - main
+on: workflow_dispatch
 jobs:
   build:
     strategy:
@@ -18,8 +15,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: echo "Running on ${{ matrix.os }}"
+      - run: echo "Running on ${{ matrix.os }}" 
       - run: npm ci
+      - name: Make app
+        run: npm run make
       - name: Publish app
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
