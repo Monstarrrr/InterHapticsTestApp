@@ -33,6 +33,7 @@ const config: ForgeConfig = {
           name: 'InterHapticsTestApp',
         },
         authToken: process.env.GITHUB_TOKEN,
+        draft: false,
       },
     },
   ],
