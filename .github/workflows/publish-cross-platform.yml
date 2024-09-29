@@ -19,7 +19,12 @@ jobs:
         with:
           node-version: 20
       - run: echo "Running on ${{ matrix.os }}"
+      - name: Install appdmg if macos
+        if: matrix.os == 'macos-latest'
+        run: npm i appdmg  
       - run: npm ci
+      - name: Make app
+        run: npm run make
       - name: Publish app
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
