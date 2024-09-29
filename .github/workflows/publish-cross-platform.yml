@@ -18,10 +18,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: echo "Running on ${{ matrix.os }}"
-      - name: Install appdmg if macos
-        if: matrix.os == 'macos-latest'
-        run: npm i appdmg  
+      - run: echo "Running on ${{ matrix.os }}" 
       - run: npm ci
       - name: Make app
         run: npm run make
