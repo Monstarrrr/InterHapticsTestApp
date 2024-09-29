@@ -1,7 +1,7 @@
 {
   "name": "interhapticstestapp",
   "productName": "interhapticstestapp",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
@@ -45,6 +45,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "update-electron-app": "^3.0.0"
   }
 }

@@ -8,6 +8,10 @@ declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 // Prevent windows app errors when running electron-squirrel-startup
 if (require('electron-squirrel-startup') === true) app.quit()
 
+// Ensure that app is has latest update available
+const { updateElectronApp } = require('update-electron-app')
+updateElectronApp()
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit()
