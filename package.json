@@ -1,12 +1,12 @@
 {
   "name": "interhapticstestapp",
   "productName": "interhapticstestapp",
-  "version": "1.2.4",
+  "version": "1.4.6",
   "description": "My Electron application description",
   "main": ".webpack/main",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Monstarrrr/InterHapticsTestApp"
+    "url": "monstarrrr/InterHapticsTestApp"
   },
   "scripts": {
     "start": "electron-forge start",
@@ -16,6 +16,8 @@
     "lint": "eslint --ext .ts,.tsx ."
   },
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-react": "^7.24.7",
     "@electron-forge/cli": "^7.5.0",
     "@electron-forge/maker-deb": "^7.5.0",
     "@electron-forge/maker-dmg": "^7.5.0",
@@ -27,9 +29,12 @@
     "@electron-forge/plugin-webpack": "^7.5.0",
     "@electron-forge/publisher-github": "^7.5.0",
     "@electron/fuses": "^1.8.0",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "@vercel/webpack-asset-relocator-loader": "1.7.3",
+    "babel-loader": "^9.2.1",
     "css-loader": "^6.0.0",
     "electron": "32.1.2",
     "eslint": "^8.0.1",
@@ -49,7 +54,10 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "electron-is-dev": "^3.0.1",
     "electron-squirrel-startup": "^1.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "update-electron-app": "^3.0.0"
   }
 }
